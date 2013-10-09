@@ -47,8 +47,8 @@ class nnmxNodeBlogMigration extends Migration {
       'nid' => t('The node ID of the page'),
       'url_alias' => t('The url alias of the node'),
       'category' => t('The category for the node'),
-      'content_field_video_youtube' => t('youtube video field'),
-      'content_field_youtube' => t('youtube field'),
+      /*'content_field_video_youtube' => t('youtube video field'),
+      'content_field_youtube' => t('youtube field'),*/
       'content_field_fotoblog' => t('blog image'),
       'content_field_fotoblog_alt' => t('blog image alt'),
       'content_field_fotoblog_title' => t('blog image title'),
@@ -78,8 +78,8 @@ class nnmxNodeBlogMigration extends Migration {
     $this->addFieldMapping('field_blog_category', 'category')->separator(',');
     $body_arguments = MigrateTextFieldHandler::arguments(array('source_field' => 'teaser'), array('source_field' => 'format'));
     $this->addFieldMapping('body', 'body')->arguments($body_arguments);
-    $this->addFieldMapping('field_video_youtube', 'content_field_video_youtube');
-    $this->addFieldMapping('field_youtube', 'content_field_youtube');
+    /*$this->addFieldMapping('field_video_youtube', 'content_field_video_youtube');
+    $this->addFieldMapping('field_youtube', 'content_field_youtube');*/
 
     $this->addFieldMapping('field_blog_foto', 'content_field_fotoblog');
     $this->addFieldMapping('field_blog_foto:alt', 'content_field_fotoblog_alt');
@@ -105,9 +105,9 @@ class nnmxNodeBlogMigration extends Migration {
     $current_row->url_alias = nnmx_migration_get_url_alias($current_row->nid);
 
     //set youtube video fiel
-    $current_row->content_field_video_youtube = nnmx_migration_get_video_youtube($current_row->vid);
+   /* $current_row->content_field_video_youtube = nnmx_migration_get_video_youtube($current_row->vid);
 
-    $current_row->content_field_youtube = nnmx_migration_get_video_youtube($current_row->vid);
+    $current_row->content_field_youtube = nnmx_migration_get_video_youtube($current_row->vid);*/
 
     //get the fid of the image's of the blog
     // Set file data for the attachment file fields.
