@@ -72,7 +72,8 @@ class nnmxNodeVideoMigration extends Migration {
     $this->addFieldMapping('comment', 'comment');
     $this->addFieldMapping('path', 'url_alias');
     $this->addFieldMapping('language')->defaultValue(LANGUAGE_NONE);
-    $this->addFieldMapping('field_blog_category', 'category')->separator(',');
+    $this->addFieldMapping('field_edicion', 'edicion')->separator(',');
+    $this->addFieldMapping('field_ubicacion', 'ubicacion')->separator(',');
     $body_arguments = MigrateTextFieldHandler::arguments(array('source_field' => 'teaser'), array('source_field' => 'format'));
     $this->addFieldMapping('body', 'body')->arguments($body_arguments);
     $this->addFieldMapping('field_autores', 'content_field_autor');
