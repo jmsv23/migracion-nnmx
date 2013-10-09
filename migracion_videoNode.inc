@@ -55,7 +55,7 @@ class nnmxNodeVideoMigration extends Migration {
     $this->source = new MigrateSourceSQL($query, $source_fields);
 
     // Set up our destination - node in this case.
-    $this->destination = new MigrateDestinationNode('blog');
+    $this->destination = new MigrateDestinationNode('video');
 
 // Assign mappings TO destination fields FROM source fields.
     $this->addFieldMapping('is_new')->defaultValue(TRUE);
