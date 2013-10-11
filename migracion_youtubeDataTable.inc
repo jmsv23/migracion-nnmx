@@ -28,15 +28,15 @@ $query = db_select(SOURCE_DATABASE . '.node', 'n')
     $query->join(SOURCE_DATABASE . '.content_field_video_youtube', 'nr', 'n.vid = nr.vid');
     $query->addField('nr', 'field_video_youtube_value');
 
-    $this->source = new MigrateSourceSQL($query);
-    $this->destination = new MigrateDestinationTable($table_name);
-
-
     //source fields
 
     $source_fields = array(
       'link_youtube' => t('link from youtube'),
     );
+
+    $this->source = new MigrateSourceSQL($query, $source_fields);
+    $this->destination = new MigrateDestinationTable($table_name);
+
 
 
 //map fields
