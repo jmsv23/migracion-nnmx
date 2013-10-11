@@ -15,6 +15,7 @@ class nnmxYoutubeRevisionTableMigration extends Migration {
               'unsigned' => TRUE,
               'not null' => TRUE,
               'description' => 'table vid',
+              'alias' => 'n',
             )
           ),
         MigrateDestinationTable::getKeySchema($table_name)
