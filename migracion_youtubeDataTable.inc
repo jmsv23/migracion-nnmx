@@ -43,6 +43,6 @@ $query = db_select(SOURCE_DATABASE . '.node', 'n')
   }
 
    public function prepareRow($current_row) {
-    $current_row->link_youtube = 'http://www.youtube.com/watch?v=' . $current_row->field_video_youtube_value);
+    $current_row->link_youtube = 'http://www.youtube.com/watch?v=' . $current_row->field_video_youtube_value;
    }
 }
