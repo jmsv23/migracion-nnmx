@@ -31,6 +31,14 @@ $query = db_select(SOURCE_DATABASE . '.node', 'n')
     $this->source = new MigrateSourceSQL($query);
     $this->destination = new MigrateDestinationTable($table_name);
 
+
+    //source fields
+
+    $source_fields = array(
+      'link_youtube' => t('link from youtube'),
+    );
+
+
 //map fields
         //fid uid filename URI  filemime  filesize status timestamp type
   $this->addFieldMapping('entity_type')->defaultValue('node');
