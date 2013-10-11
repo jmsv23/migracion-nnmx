@@ -40,8 +40,8 @@ $query = db_select(SOURCE_DATABASE . '.node', 'n')
   $this->addFieldMapping('revision_id', 'vid');
   $this->addFieldMapping('language')->defaultValue('und');
   $this->addFieldMapping('delta')->defaultValue(0);
-  $this->addFieldMapping('field_test_youtube_input', 'link_youtube');
-  $this->addFieldMapping('field_test_youtube_video_id', 'field_video_youtube_value');
+  $this->addFieldMapping('field_youtube_input', 'link_youtube');
+  $this->addFieldMapping('field_youtube_video_id', 'field_video_youtube_value');
   }
 
    public function prepareRow($current_row) {
