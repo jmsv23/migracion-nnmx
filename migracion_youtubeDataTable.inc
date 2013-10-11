@@ -28,6 +28,8 @@ $query = db_select(SOURCE_DATABASE . '.node', 'n')
     $query->join(SOURCE_DATABASE . '.content_field_video_youtube', 'nr', 'n.vid = nr.vid');
     $query->addField('nr', 'field_video_youtube_value');
 
+    $this->source = new MigrateSourceSQL($query);
+    $this->destination = new MigrateDestinationTable($table_name);
 
 //map fields
         //fid uid filename URI  filemime  filesize status timestamp type
